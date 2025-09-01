@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Observatorio_aguas
-Trabajo en equipo  en pagina web 
-=======
 # 🌊 Observatorio de Aguas
 
 **Sistema integral de monitoreo y análisis de cuerpos de agua**
@@ -54,7 +50,6 @@ npm install
 npm run dev
 ```
 
-El frontend estará disponible en: http://localhost:5173
 
 ### Configuración del Backend
 
@@ -73,7 +68,6 @@ pip install -r requirements.txt
 python run.py
 ```
 
-El backend estará disponible en: http://localhost:8000
 
 ## 📋 Funcionalidades Principales
 
@@ -233,7 +227,23 @@ FRONTEND_URL=http://localhost:5173
 - **Backend**: FastAPI + SQLAlchemy
 - **Mapas**: Leaflet + OpenStreetMap
 - **UI/UX**: Diseño moderno y responsivo
-
-
-
->>>>>>> d511177 (Proyecto de pagina web(windows))
+- 
+- ## Frontend (React)
+- El proyecto utiliza Vite como herramienta de construcción, que es moderna y eficiente para aplicaciones React.
+- Tiene correctamente configuradas las dependencias en package.json , incluyendo React 18, Leaflet (para mapas), Tailwind CSS, y otras bibliotecas necesarias.
+- La aplicación React está configurada para redirigir al archivo mapa-simple.html que se encuentra en la carpeta public , lo cual es una decisión de diseño específica para este proyecto.
+- El archivo main.jsx inicializa correctamente la aplicación React con StrictMode.
+## Configuración de Docker
+- El Dockerfile del frontend está correctamente configurado con un enfoque de múltiples etapas (multi-stage build):
+  - Primera etapa para construir la aplicación con Node.js
+  - Segunda etapa para servir la aplicación con Nginx
+- La configuración de Nginx ( nginx.conf ) está bien estructurada para una aplicación SPA (Single Page Application) con configuraciones de seguridad y rendimiento.
+## Backend (FastAPI)
+- Utiliza FastAPI como framework para la API, que es moderno y de alto rendimiento.
+- Tiene configurado CORS para permitir conexiones desde el frontend.
+- Implementa modelos de datos con Pydantic para validación.
+## Integración
+- El docker-compose.yml configura correctamente ambos servicios (frontend y backend) y establece las conexiones entre ellos.
+- Las variables de entorno están configuradas para que los servicios puedan comunicarse entre sí.
+## Conclusión
+El proyecto está bien estructurado y utiliza tecnologías modernas y adecuadas para una aplicación web con frontend en React y backend en FastAPI. La decisión de redirigir desde la aplicación React a un archivo HTML estático ( mapa-simple.html ) es un enfoque válido, aunque poco común, pero puede ser apropiado para este caso de uso específico donde se necesita una integración directa con Leaflet para la visualización de mapas.
