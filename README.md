@@ -109,9 +109,7 @@ python run.py
 | PUT | `/cuerpos-agua/{id}` | Actualizar registro existente | `id`: ID del cuerpo de agua + Objeto JSON |
 | DELETE | `/cuerpos-agua/{id}` | Eliminar registro | `id`: ID del cuerpo de agua |
 
-### Documentación Interactiva
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+
 
 ## 📁 Estructura del Proyecto
 
@@ -209,17 +207,6 @@ python run.py        # Servidor de desarrollo
 ### Producción
 1. **Frontend**: Build estático deployable en cualquier CDN
 2. **Backend**: Compatible con Docker, Heroku, AWS, etc.
-
-### Variables de Entorno
-```env
-# Backend
-DATABASE_URL=sqlite:///./observatorio_aguas.db
-API_HOST=0.0.0.0
-API_PORT=8000
-FRONTEND_URL=http://localhost:5173
-```
-
-
 
 ## 👥 Equipo de Desarrollo
 
